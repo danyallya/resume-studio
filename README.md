@@ -10,7 +10,7 @@ This starter uses fictional profile content in local UI state. It does not store
 ## Run locally
 Use Node.js 20 or newer. The machine-specific .npmrc is ignored by Git and points to the configured package mirror.
 
-    npm install
+    npm ci
     npm run dev
 
 Use npm test, npm run typecheck and npm run build before releases. Keep the resume readable on phone, tablet and desktop, and verify print output after template changes.
