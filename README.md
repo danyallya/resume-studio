@@ -20,3 +20,7 @@ Career history can be sensitive. Do not add real personal records to fixtures, l
 
 ### Resume profile model and validation
 `src/domain/resumeProfile.ts` defines typed profile, experience, education, selected-work and skill sections. Validation checks required name, headline, summary and email; email and optional HTTP(S) portfolio URL formats; experience and education year ranges; achievement text; a selected project; and at least three unique non-empty skills. The completion count and percentage come from these section results. `src/data/sampleProfile.ts` is explicitly fictional and uses reserved example domains; the UI holds it in memory only and does not claim it was saved.
+
+## Delivery and review
+
+Forma's review must connect field-specific profile validation to the live preview, preserve résumé sections and private career data, and inspect readable print output after template changes. Follow [DELIVERY-POLICY.md](DELIVERY-POLICY.md) from Day 02 for sequential execution, scope-driven commits and this repository's separate branch/PR with GitHub panel review and merge.

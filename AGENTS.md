@@ -8,3 +8,9 @@
 - Update BACKLOG.md after each run, record new work, and prepare the next ticket explicitly.
 - Keep .npmrc local and ignored. Never commit credentials, resumes, personal exports, .env or build output; do not rewrite Git history.
 - Restrict changes to this repository and use meaningful commits on descriptive day branches after checks pass.
+
+## Delivery from Day 02
+
+- Read and follow [DELIVERY-POLICY.md](DELIVERY-POLICY.md). Finish Forma Resume Studio and its own PR panel review, merge and sync before the next portfolio repository, or record an exact external blocker. No concurrent project or subagent work.
+- Choose commit counts, boundaries, content and wording from this product's real changes; do not copy a fixed history pattern from other projects.
+- Review the latest pushed head and checks in GitHub and merge through this repository's PR panel. Respect required independent approvals; self-review does not replace them.

@@ -46,3 +46,7 @@ Mark each day Done, In progress or Blocked, update findings and prepare the next
 
 - Day 01: Done. Profile, experience, education, selected-work, and skill validation now drives section status and completeness; next is Day 02, an accessible profile/contact editor with examples.
 - Review carry-over for Day 02: validation issues are currently surfaced only as completion states; connect profile/contact fields to the editor and announce field-specific errors.
+
+## Process change effective Day 02 — 2026-10-27
+
+Apply [DELIVERY-POLICY.md](DELIVERY-POLICY.md) to every remaining ticket: finish Forma Resume Studio before the next repository, use meaningful scope-driven commits and deliver through its own reviewed PR. A blocked external gate needs a concrete record and next action. This adds delivery gates without moving Day 02–30 product work or changing completed history.
