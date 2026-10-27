@@ -24,3 +24,7 @@ Career history can be sensitive. Do not add real personal records to fixtures, l
 ## Delivery and review
 
 Forma's review must connect field-specific profile validation to the live preview, preserve résumé sections and private career data, and inspect readable print output after template changes. Follow [DELIVERY-POLICY.md](DELIVERY-POLICY.md) from Day 02 for sequential execution, scope-driven commits and this repository's separate branch/PR with GitHub panel review and merge.
+
+## Contributions and examples
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible reports, genuine collaboration and product examples such as an English/Persian editor and print example without personal details. Contributions follow the product backlog and reviewed PR workflow.

@@ -37,3 +37,7 @@ Historical Day 00/01 entries describe their original workflow. This policy super
 An RTL ordering repair, a schema migration and PDF layout work should be described by their own user impact. Split them only when each is independently reviewable, and keep the relevant fixtures/tests with their change.
 
 Next planned scope: Day 02 — accessible profile/contact editor with examples and field-specific errors.
+
+## Contribution evidence
+
+Follow [CONTRIBUTING.md](CONTRIBUTING.md) within the existing delivery scope. Consider a synthetic bilingual profile validation or RTL preview case. Keep real issue links and agreed coauthor attribution with the matching change. Profile goals do not change commit counts, review gates, day numbering or authorization for external contact/settings/payment.
