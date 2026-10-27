@@ -17,3 +17,6 @@ Use npm test, npm run typecheck and npm run build before releases. Keep the resu
 
 ## Privacy and accessibility
 Career history can be sensitive. Do not add real personal records to fixtures, logs or source control. As editing features are added, keep user data local unless they explicitly opt into an account-backed service. Preserve labels, keyboard order, contrast and reduced-motion preferences.
+
+### Resume profile model and validation
+`src/domain/resumeProfile.ts` defines typed profile, experience, education, selected-work and skill sections. Validation checks required name, headline, summary and email; email and optional HTTP(S) portfolio URL formats; experience and education year ranges; achievement text; a selected project; and at least three unique non-empty skills. The completion count and percentage come from these section results. `src/data/sampleProfile.ts` is explicitly fictional and uses reserved example domains; the UI holds it in memory only and does not claim it was saved.

@@ -11,7 +11,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 
 | Day | Deliverable |
 |---|---|
-| 01 | Define typed resume profile and section schemas with validation rules. |
+| 01 | **Done** — define typed profile/section schemas and validation rules; derive completion status from validated sample content. |
 | 02 | Add profile and contact editor with accessible labels and examples. |
 | 03 | Add experience editor with achievement prompts and date validation. |
 | 04 | Add education, certification and skills editors. |
@@ -43,3 +43,6 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | 30 | Release-candidate review, all checks, known limits and release notes. |
 
 Mark each day Done, In progress or Blocked, update findings and prepare the next day's work.
+
+- Day 01: Done. Profile, experience, education, selected-work, and skill validation now drives section status and completeness; next is Day 02, an accessible profile/contact editor with examples.
+- Review carry-over for Day 02: validation issues are currently surfaced only as completion states; connect profile/contact fields to the editor and announce field-specific errors.
