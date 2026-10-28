@@ -28,3 +28,7 @@ Forma's review must connect field-specific profile validation to the live previe
 ## Contributions and examples
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible reports, genuine collaboration and product examples such as an English/Persian editor and print example without personal details. Contributions follow the product backlog and reviewed PR workflow.
+
+## Profile and contact editor
+
+Labeled fields edit the in-memory profile and preview together. Name, headline, email and summary follow the shared profile validator; optional portfolio links allow HTTP(S) only. Each invalid field exposes its error through aria-describedby/aria-invalid; Review profile fields announces the count and focuses the first invalid field. Examples use reserved domains and synthetic English/Persian text. Text fields/preview use automatic direction while email/URL stay LTR. Experience, education, projects and skills are preserved. No disk save, upload or account persistence occurs. Print styles hide editor controls, but actual print/theme/mobile visual review remains pending because browser access is disabled.

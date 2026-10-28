@@ -12,7 +12,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | Day | Deliverable |
 |---|---|
 | 01 | **Done** — define typed profile/section schemas and validation rules; derive completion status from validated sample content. |
-| 02 | Add profile and contact editor with accessible labels and examples. |
+| 02 | Implemented, delivery blocked — profile/contact editor with examples, preview and field errors; browser/PR panel gates pending. |
 | 03 | Add experience editor with achievement prompts and date validation. |
 | 04 | Add education, certification and skills editors. |
 | 05 | Add preview synchronization and completion guidance per section. |

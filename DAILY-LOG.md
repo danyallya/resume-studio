@@ -32,3 +32,11 @@
 - Documentation-only scope on docs/forma-resume-contributors; reviewed Markdown and git diff --check. App tests/build are not rerun because runtime behavior is unchanged.
 - External blocker: local browser use is disabled in Work settings. PR creation, panel review and merge remain pending; resume from this branch when browser access is available, inspect existing PRs first, target main and follow all gates.
 - Publication is pre-merge here; the final PR/head/panel/check/merge/sync evidence goes in the workspace DELIVERY-RECEIPTS.md after completion. Next: Day 02 — accessible profile/contact editor with examples and field-specific errors. Wait for the user's day trigger.
+
+## Day 02 — profile/contact editor — 2026-10-28
+
+- Reconciled merged PR #1/#2 receipts at origin/main eee3b95. Reviewed profile schema, preview and previous validation tests. Completion was static and field errors were not editable; replaced that gap with controlled session profile state.
+- Added labeled name/headline/location/email/portfolio/summary fields, synthetic bilingual examples, per-field validation associations, invalid-field focus and review announcements. Preview/completion derive from the same current profile while other sections retain their records. Persian-capable fields use automatic direction; email and URL remain LTR. Added print control exclusions and theme-aware editor surfaces.
+- npm test -- --reporter=dot --maxWorkers=1 passed (3 files, 5 tests); npm run build passed including typecheck/PWA; git diff --check passed. No standalone lint script. Review caught and corrected the new editor's surface variable for dark mode. No personal data, local config or build output staged.
+- Work browser disabled: actual RTL/print/mobile/theme/keyboard inspection and PR/panel review/merge/sync are pending. Branch day-02/profile-contact-fields is pushed; workspace receipt records final head. No external contact, coauthor, badge or CI claim. Synthetic field/RTL cases are the contribution evidence.
+- Next: finish these delivery gates; Day 03 adds experience editing with achievement prompts and date validation when triggered.
