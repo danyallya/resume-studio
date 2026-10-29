@@ -32,6 +32,6 @@ export function ProfileEditor({ profile, onChange }: { profile: ResumeProfile; o
       </div>;
     })}
     <button type="submit">Review profile fields</button>
-    <p role="status">{reviewed ? issues.length ? `${issues.length} profile fields need attention.` : 'Profile fields are ready to review. Changes remain in this session.' : ''}</p>
+    {reviewed && <p role="status" aria-live="polite">{issues.length ? `${issues.length} profile fields need attention.` : 'Profile fields are ready to review. Changes remain in this session.'}</p>}
   </form>;
 }
