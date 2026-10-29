@@ -5,7 +5,7 @@ Forma helps experienced professionals shape a clear, credible resume and portfol
 ## Product experience
 The foundation pairs section completeness with a live resume preview, an editorial template, writing prompts and a private personal workspace. Mantine provides accessible interface primitives and React Icons supports the navigation and actions.
 
-This starter uses fictional profile content in local UI state. It does not store or submit personal information. The roadmap covers structured editing, multiple resume templates, document import, PDF and spreadsheet exports, privacy controls, PWA support and accessible responsive review.
+This starter uses fictional profile content in local UI state. It does not store or submit personal information. The roadmap covers education, certification and skills editing, multiple resume templates, document import, PDF and spreadsheet exports, privacy controls, PWA support and accessible responsive review.
 
 ## Run locally
 Use Node.js 20 or newer. The machine-specific .npmrc is ignored by Git and points to the configured package mirror.
@@ -31,4 +31,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible reports, genuine collabo
 
 ## Profile and contact editor
 
-Labeled fields edit the in-memory profile and preview together. Name, headline, email and summary follow the shared profile validator; optional portfolio links allow HTTP(S) only. Each invalid field exposes its error through aria-describedby/aria-invalid; Review profile fields announces the count and focuses the first invalid field. Examples use reserved domains and synthetic English/Persian text. Text fields/preview use automatic direction while email/URL stay LTR. Experience, education, projects and skills are preserved. No disk save, upload or account persistence occurs. Print styles hide editor controls, but actual print/theme/mobile visual review remains pending because browser access is disabled.
+Labeled fields edit the in-memory profile and preview together. Name, headline, email and summary follow the shared profile validator; optional portfolio links allow HTTP(S) only. Each invalid field exposes its error through aria-describedby/aria-invalid; Review profile fields announces the count and focuses the first invalid field. Examples use reserved domains and synthetic English/Persian text. Text fields/preview use automatic direction while email/URL stay LTR. Education, selected work and skills are preserved. No disk save, upload or account persistence occurs. Print styles hide editor controls. Day 02 browser review checked the 390px layout, live profile updates, invalid-email focus/announcement and Persian preview; print-specific review remains pending.
+
+## Experience editor
+
+Role title, organization, start/end year, current-role status and achievement text update the same in-memory profile used by the resume preview and section completeness. Dates accept whole years from 1900 to 2200, and an end year must not precede the start year. Current roles show **Present** and disable the end-year field. Field errors connect to their inputs and **Review experience fields** focuses the first issue. Add/remove controls keep the role and achievement lists editable. Writing prompts ask for a change, beneficiary and supportable result; they discourage unverified metrics. Role, organization and achievement fields use automatic text direction for English and Persian. No career content is stored or submitted.
