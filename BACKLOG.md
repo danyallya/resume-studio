@@ -12,8 +12,8 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | Day | Deliverable |
 |---|---|
 | 01 | **Done** — define typed profile/section schemas and validation rules; derive completion status from validated sample content. |
-| 02 | Implemented, delivery blocked — profile/contact editor with examples, preview and field errors; browser/PR panel gates pending. |
-| 03 | Add experience editor with achievement prompts and date validation. |
+| 02 | **Done** — profile/contact editor with examples, preview and field errors merged in PR #4 (`9febe00`). |
+| 03 | Implemented — experience editor with achievement prompts, date validation and live preview; GitHub panel delivery remains pending. |
 | 04 | Add education, certification and skills editors. |
 | 05 | Add preview synchronization and completion guidance per section. |
 | 06 | Add section reorder and hide/show controls with keyboard support. |
@@ -53,4 +53,9 @@ Apply [DELIVERY-POLICY.md](DELIVERY-POLICY.md) to every remaining ticket: finish
 
 ## Contribution integration — 2026-10-27
 
-Effective Day 02: apply [CONTRIBUTING.md](CONTRIBUTING.md) inside existing tickets. At already scheduled weekly reviews, assess real feedback such as a synthetic bilingual profile validation or RTL preview case; at documentation/setup tickets, improve an English/Persian editor and print example without personal details. Day 30 records actual contribution evidence and outstanding external dependencies. No day is renumbered and no quota or badge is a completion criterion. Next scope remains: Day 02 — accessible profile/contact editor with examples and field-specific errors.
+Effective Day 02: apply [CONTRIBUTING.md](CONTRIBUTING.md) inside existing tickets. At already scheduled weekly reviews, assess real feedback such as a synthetic bilingual profile validation or RTL preview case; at documentation/setup tickets, improve an English/Persian editor and print example without personal details. Day 30 records actual contribution evidence and outstanding external dependencies. No day is renumbered and no quota or badge is a completion criterion.
+
+- Day 02 delivery receipt reconciled 2026-10-29: PR #4 merged through GitHub with merge commit `9febe000c1a0f40e982d729ca7025d65f9465673`. The receipt records seven intended files reviewed at head `a32d3ae61175500ad557ce8dea48c3d6d48dda04` and zero configured Checks; no CI pass is claimed.
+- Day 03: Added session-only experience editing for role, organization, years/current status and achievements. Changes update the preview and completion validator; errors link to fields and review focuses the first issue. Achievement prompts emphasize supportable outcomes and avoid invented metrics. Issue #3 about selected-work preview/completeness remains a separate open follow-up.
+
+Next scope: Day 04 — education, certification and skills editors, after Day 03 delivery gates are completed.
