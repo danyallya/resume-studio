@@ -1,0 +1,32 @@
+.education-editor,.skills-editor{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:20px}
+.education-editor h2,.skills-editor h2{font:600 18px 'Playfair Display';margin:0 0 6px}
+.education-editor-intro,.skills-editor-intro{font-size:12px;line-height:1.5;color:var(--muted);margin:0 0 15px}
+.education-group{border-top:1px solid var(--line);padding-top:13px;margin-top:15px}
+.education-group h3,.skills-list h3{font:600 13px 'DM Sans';margin:0 0 8px}
+.education-group h3 span{font-weight:400;color:var(--muted)}
+.education-group-help{font-size:11px;line-height:1.5;color:var(--muted);margin:0 0 10px}
+.education-entry,.certification-entry{border:1px solid var(--line);border-radius:8px;padding:12px;margin:11px 0}
+.education-entry legend,.certification-entry legend{font-size:12px;font-weight:700;padding:0 5px;max-width:95%;overflow-wrap:anywhere}
+.education-field{display:grid;gap:5px;margin-block:10px;font-size:12px;min-width:0}
+.education-field label{font-weight:600}
+.education-field input{width:100%;min-width:0;font:inherit;background:var(--bg);color:var(--ink);padding:9px;border:1px solid #87948e;border-radius:6px}
+.education-field small{font-size:10px;line-height:1.45;color:var(--muted)}
+.education-years{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.education-year-help{display:block;font-size:10px;line-height:1.45;color:var(--muted)}
+.education-error{margin:4px 0 0;color:#a82e2e;font-size:11px;line-height:1.45}
+.dark .education-error{color:#ffa7a7}
+.education-remove,.skill-remove{border:1px solid #bf9c95;border-radius:5px;background:transparent;color:#8e3b31;padding:7px 9px;font:600 10px 'DM Sans';cursor:pointer}
+.dark .education-remove,.dark .skill-remove{color:#ffb1a7;border-color:#83564f}
+.education-add,.education-review{border:1px solid #176658;border-radius:6px;padding:9px 11px;font:600 10px 'DM Sans';cursor:pointer}
+.education-add{background:#176658;color:#fff}
+.education-review{background:transparent;color:var(--ink)}
+.education-actions,.skills-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.education-review-status{min-height:1.2em;margin:9px 0 0;font-size:11px;color:var(--muted)}
+.skills-list{border-top:1px solid var(--line);padding-top:13px}
+.skill-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:9px;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:8px}
+.skill-row .education-field{margin-block:4px}
+.skill-remove{margin-bottom:5px}
+.paper-credential-link{display:inline-block;margin-top:4px;color:#176658;font-size:9px;text-decoration:underline}
+.dark .paper-credential-link{color:#176658}
+.paper-credential-link:focus-visible{outline:2px solid #228778;outline-offset:2px}
+@media(max-width:650px){.education-editor,.skills-editor{padding:14px}.education-years{gap:8px}}

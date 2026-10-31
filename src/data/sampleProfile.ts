@@ -32,6 +32,9 @@ export const sampleProfile: ResumeProfile = {
   education: [
     { id: 'education-parsons', credential: 'BFA, Communication Design', institution: 'Parsons School of Design', startYear: 2015, endYear: 2019 },
   ],
+  certifications: [
+    { id: 'cert-accessibility-foundations', name: 'Accessibility Foundations', issuer: 'Open Learning Institute', year: 2021, credentialUrl: 'https://example.com/certificates/accessibility-foundations' },
+  ],
   selectedWork: [],
   skills: ['Product strategy', 'Prototyping', 'Design systems'],
 };
