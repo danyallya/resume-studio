@@ -57,4 +57,21 @@ describe('Forma education and certification editors', () => {
     expect(editor.getByText('Use a complete http or https credential URL without embedded credentials.')).toBeInTheDocument();
     expect(screen.queryByRole('link', { name: /View credential/ })).not.toBeInTheDocument();
   });
+
+  it('supports synthetic Persian education text and keeps credential URLs left-to-right', () => {
+    render(<App />);
+    const editor = within(screen.getByRole('region', { name: 'Education and certifications' }));
+    const credential = editor.getByLabelText('Credential or field of study');
+    const persianCredential = 'کارشناسی ارشد طراحی خدمات';
+    fireEvent.change(credential, { target: { value: persianCredential } });
+    expect(credential).toHaveAttribute('dir', 'auto');
+    expect(screen.getAllByText(persianCredential, { exact: true })).toHaveLength(2);
+    expect(editor.getByLabelText('Verification link (optional)')).toHaveAttribute('dir', 'ltr');
+
+    const skillEditor = within(screen.getByRole('region', { name: 'Skills' }));
+    const skill = skillEditor.getByLabelText('Skill 1');
+    fireEvent.change(skill, { target: { value: 'طراحی سامانه' } });
+    expect(skill).toHaveAttribute('dir', 'auto');
+    expect(screen.getByText('طراحی سامانه', { exact: true })).toBeInTheDocument();
+  });
 });
