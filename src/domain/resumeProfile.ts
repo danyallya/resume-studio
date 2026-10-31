@@ -22,8 +22,16 @@ export type ResumeEducation = {
   id: string;
   credential: string;
   institution: string;
-  startYear: number;
-  endYear: number;
+  startYear: number | null;
+  endYear: number | null;
+};
+
+export type ResumeCertification = {
+  id: string;
+  name: string;
+  issuer: string;
+  year: number | null;
+  credentialUrl: string;
 };
 
 export type ResumeProject = {
@@ -43,6 +51,7 @@ export type ResumeProfile = {
   summary: string;
   experience: ResumeExperience[];
   education: ResumeEducation[];
+  certifications: ResumeCertification[];
   selectedWork: ResumeProject[];
   skills: string[];
 };
@@ -62,12 +71,12 @@ export type ResumeValidation = {
 };
 
 const isBlank = (value: string) => value.trim().length === 0;
-const isValidYear = (year: number) => Number.isInteger(year) && year >= 1900 && year <= 2200;
+const isValidYear = (year: number | null) => typeof year === 'number' && Number.isInteger(year) && year >= 1900 && year <= 2200;
 
-function isHttpUrl(value: string): boolean {
+export function isHttpUrl(value: string): boolean {
   try {
     const url = new URL(value);
-    return url.protocol === 'http:' || url.protocol === 'https:';
+    return (url.protocol === 'http:' || url.protocol === 'https:') && !url.username && !url.password;
   } catch {
     return false;
   }
@@ -95,7 +104,7 @@ export function validateResumeProfile(profile: ResumeProfile): ResumeValidation 
   }
   if (isBlank(profile.summary)) addIssue('profile', 'summary', 'required', 'Add a short professional summary.');
   if (profile.website && !isHttpUrl(profile.website)) {
-    addIssue('profile', 'website', 'format', 'Use a complete http or https portfolio URL.');
+    addIssue('profile', 'website', 'format', 'Use a complete http or https portfolio URL without embedded credentials.');
   }
 
   if (profile.experience.length === 0) {
@@ -122,8 +131,22 @@ export function validateResumeProfile(profile: ResumeProfile): ResumeValidation 
     const prefix = `education.${index}`;
     if (isBlank(education.credential)) addIssue('education', `${prefix}.credential`, 'required', 'Add a credential or field of study.');
     if (isBlank(education.institution)) addIssue('education', `${prefix}.institution`, 'required', 'Add an institution.');
-    if (!isValidYear(education.startYear) || !isValidYear(education.endYear) || education.endYear < education.startYear) {
+    if (!isValidYear(education.startYear) || !isValidYear(education.endYear) || (
+      education.startYear !== null && education.endYear !== null && education.endYear < education.startYear
+    )) {
       addIssue('education', `${prefix}.years`, 'range', 'Enter valid education years in chronological order.');
+    }
+  });
+
+  profile.certifications.forEach((certification, index) => {
+    const prefix = `certifications.${index}`;
+    if (isBlank(certification.name)) addIssue('education', `${prefix}.name`, 'required', 'Add a certification name.');
+    if (isBlank(certification.issuer)) addIssue('education', `${prefix}.issuer`, 'required', 'Add an issuing organization.');
+    if (certification.year !== null && !isValidYear(certification.year)) {
+      addIssue('education', `${prefix}.year`, 'range', 'Enter a year from 1900 to 2200, or leave it blank.');
+    }
+    if (certification.credentialUrl && !isHttpUrl(certification.credentialUrl)) {
+      addIssue('education', `${prefix}.credentialUrl`, 'format', 'Use a complete http or https credential URL without embedded credentials.');
     }
   });
 
@@ -134,7 +157,7 @@ export function validateResumeProfile(profile: ResumeProfile): ResumeValidation 
     const prefix = `selectedWork.${index}`;
     if (isBlank(project.title)) addIssue('selectedWork', `${prefix}.title`, 'required', 'Add a project title.');
     if (isBlank(project.description)) addIssue('selectedWork', `${prefix}.description`, 'required', 'Add a short project description.');
-    if (project.url && !isHttpUrl(project.url)) addIssue('selectedWork', `${prefix}.url`, 'format', 'Use a complete http or https project URL.');
+    if (project.url && !isHttpUrl(project.url)) addIssue('selectedWork', `${prefix}.url`, 'format', 'Use a complete http or https project URL without embedded credentials.');
   });
 
   if (profile.skills.length < 3) addIssue('skills', 'skills', 'required', 'Add at least three skills.');
