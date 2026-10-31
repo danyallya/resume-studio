@@ -13,8 +13,8 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 |---|---|
 | 01 | **Done** — define typed profile/section schemas and validation rules; derive completion status from validated sample content. |
 | 02 | **Done** — profile/contact editor with examples, preview and field errors merged in PR #4 (`9febe00`). |
-| 03 | Implemented — experience editor with achievement prompts, date validation and live preview; GitHub panel delivery remains pending. |
-| 04 | Add education, certification and skills editors. |
+| 03 | **Done** — experience editor with achievement prompts, date validation and live preview; merged through GitHub PR #5 (`5bea87c`). |
+| 04 | **In progress** — add education, optional certification and skills editors with validation and live-preview synchronization. |
 | 05 | Add preview synchronization and completion guidance per section. |
 | 06 | Add section reorder and hide/show controls with keyboard support. |
 | 07 | Review first-week form/preview behavior, test it and fix data loss risks. |
@@ -57,5 +57,6 @@ Effective Day 02: apply [CONTRIBUTING.md](CONTRIBUTING.md) inside existing ticke
 
 - Day 02 delivery receipt reconciled 2026-10-29: PR #4 merged through GitHub with merge commit `9febe000c1a0f40e982d729ca7025d65f9465673`. The receipt records seven intended files reviewed at head `a32d3ae61175500ad557ce8dea48c3d6d48dda04` and zero configured Checks; no CI pass is claimed.
 - Day 03: Added session-only experience editing for role, organization, years/current status and achievements. Changes update the preview and completion validator; errors link to fields and review focuses the first issue. Achievement prompts emphasize supportable outcomes and avoid invented metrics. Issue #3 about selected-work preview/completeness remains a separate open follow-up.
+- Day 03 delivery receipt reconciled 2026-10-31: the workspace receipt confirms PR #5 targeted `main`, reviewed all 8 changed files at head `f5aae88a7ac4806eb238b968ac492da5fa3de33c`, and merged via GitHub with merge commit `5bea87cbe1325f9a78cce0f599e669e82cc39696`. Checks showed 0 configured runs; no CI pass or independent approval is claimed. This supersedes the earlier pending-panel note in DAILY-LOG.md.
 
-Next scope: Day 04 — education, certification and skills editors, after Day 03 delivery gates are completed.
+Next scope: Day 05 — preview synchronization and completion guidance per section, after Day 04 delivery gates are completed.
