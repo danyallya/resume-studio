@@ -75,3 +75,8 @@
 - Browser preview checked at 1265×718 in light and dark themes; the new editor and credentials were visible in the resume preview. Mobile-width visual emulation, print output and a full manual keyboard/assistive-technology audit remain unverified; tests cover labels, validation and first-error focus.
 - Git/PR: branch `day-04/education-certification-skills`; feature commit `6f452f6d647080f6766cab8c4f70f4688f7bb5ea` and Persian test commit `d567a2f6b111a239c0bb552353b5e71400cdb84b` are pushed. PR [#6](https://github.com/danyallya/resume-studio/pull/6) explicitly targets `main`; it is open and not merged. This documentation/log update adds a third commit; verify the resulting exact head, all changed files, Checks and Conversation in the GitHub panel before merging. No configured GitHub Checks or CI pass is claimed; no independent approval is claimed.
 - Next: finish exact-head PR #6 review, panel merge and local `main` synchronization, then Day 05 — preview synchronization and completion guidance per section when requested.
+
+## Review follow-up — Issue #3 selected-work preview — 2026-11-01
+
+- Existing profile validation counted selected work toward completion while the resume preview omitted it. Added a Selected Work preview section that renders project title and description and exposes links only for safe HTTP(S) URLs. Entry editing remains Day 13 scope.
+- Branch: fix/selected-work-preview. Implementation and verification pending.

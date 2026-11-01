@@ -60,3 +60,5 @@ Effective Day 02: apply [CONTRIBUTING.md](CONTRIBUTING.md) inside existing ticke
 - Day 03 delivery receipt reconciled 2026-10-31: the workspace receipt confirms PR #5 targeted `main`, reviewed all 8 changed files at head `f5aae88a7ac4806eb238b968ac492da5fa3de33c`, and merged via GitHub with merge commit `5bea87cbe1325f9a78cce0f599e669e82cc39696`. Checks showed 0 configured runs; no CI pass or independent approval is claimed. This supersedes the earlier pending-panel note in DAILY-LOG.md.
 
 Next scope: Day 05 — preview synchronization and completion guidance per section, after Day 04 delivery gates are completed.
+
+- Review follow-up for Issue #3: validated selected-work entries now appear in the live/print preview, aligning the preview with the existing completion validator. The project editor remains scheduled for Day 13.

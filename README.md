@@ -40,3 +40,7 @@ Role title, organization, start/end year, current-role status and achievement te
 ## Education, certifications and skills editor
 
 Education entries edit credential, institution and chronological whole-year ranges. Optional certifications edit the earned credential, issuer, optional year and optional HTTP(S) verification link; unsafe schemes are rejected and never rendered as links. Skills can be added, edited and removed, with case/whitespace-insensitive duplicate and minimum-count validation. Review actions link errors to the relevant fields and focus the first issue. All edits update the in-memory profile and live preview, including printed content. The sample certification is fictional; do not replace it or other sample profile data with a real person's records.
+
+## Selected work preview
+
+Validated portfolio projects appear under **Selected work** in the resume preview. Valid HTTP(S) project URLs are rendered as safe links; invalid URLs and empty projects do not create links. The project editor remains planned for Day 13, so this maintenance fix keeps existing profile data visible without adding data-entry or persistence behavior.
