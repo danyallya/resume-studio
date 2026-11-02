@@ -44,3 +44,7 @@ Education entries edit credential, institution and chronological whole-year rang
 ## Selected work preview
 
 Validated portfolio projects appear under **Selected work** in the resume preview. Valid HTTP(S) project URLs are rendered as safe links; invalid URLs and empty projects do not create links. The project editor remains planned for Day 13, so this maintenance fix keeps existing profile data visible without adding data-entry or persistence behavior.
+
+## Completion guidance and live preview sync
+
+The **Your story** summary uses the same validation result as the completion percentage. Each section shows either a ready state or the next actionable validation message, and activating a row moves keyboard focus to that section's editor or preview target. The preview toolbar reports the current number of ready sections, while empty selected work stays visible as a clearly labeled placeholder. All changes remain session-only and update the preview immediately.

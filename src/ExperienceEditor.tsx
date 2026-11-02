@@ -59,7 +59,7 @@ export function ExperienceEditor({ profile, onChange }: { profile: ResumeProfile
   };
 
   return <section className="experience-editor" aria-labelledby="experience-editor-title">
-    <h2 id="experience-editor-title">Experience</h2>
+    <h2 id="experience-editor-title" tabIndex={-1}>Experience</h2>
     <p className="experience-editor-intro">Add roles and evidence from this session profile. Changes update the resume preview; nothing is saved to disk.</p>
     <aside className="achievement-prompt" aria-label="Achievement writing prompts">
       <b>Make each achievement specific</b>
