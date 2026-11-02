@@ -91,7 +91,7 @@ export function EducationEditor({ profile, onChange }: { profile: ResumeProfile;
   };
 
   return <section className="education-editor" aria-labelledby="education-editor-title">
-    <h2 id="education-editor-title">Education and certifications</h2>
+    <h2 id="education-editor-title" tabIndex={-1}>Education and certifications</h2>
     <p className="education-editor-intro">Edit education and optional credentials for this session profile. Updates appear in the resume preview and are not saved to disk.</p>
 
     <div className="education-group" aria-labelledby="education-list-title">

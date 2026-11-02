@@ -47,7 +47,7 @@ export function SkillsEditor({ profile, onChange }: { profile: ResumeProfile; on
   };
 
   return <section className="skills-editor" aria-labelledby="skills-editor-title">
-    <h2 id="skills-editor-title">Skills</h2>
+    <h2 id="skills-editor-title" tabIndex={-1}>Skills</h2>
     <p className="skills-editor-intro">Keep each skill short and distinct. Changes update the preview and stay in this session.</p>
     <div className="skills-list" role="group" aria-labelledby="skills-list-title">
       <h3 id="skills-list-title">Your skills</h3>

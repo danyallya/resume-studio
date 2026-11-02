@@ -17,7 +17,7 @@ export function ProfileEditor({ profile, onChange }: { profile: ResumeProfile; o
     event.preventDefault(); setReviewed(true);
     if (issues.length) document.getElementById(`profile-${issues[0].fieldPath}`)?.focus();
   }}>
-    <h2>Profile and contact</h2><p>Session only. Changes update the preview; nothing is sent or saved to disk.</p>
+    <h2 id="profile-editor-title" tabIndex={-1}>Profile and contact</h2><p>Session only. Changes update the preview; nothing is sent or saved to disk.</p>
     {fields.map(([field, label, example]) => {
       const error = issues.find(issue => issue.fieldPath === field);
       const id = `profile-${field}`;

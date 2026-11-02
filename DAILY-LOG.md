@@ -80,3 +80,12 @@
 
 - Existing profile validation counted selected work toward completion while the resume preview omitted it. Added a Selected Work preview section that renders project title and description and exposes links only for safe HTTP(S) URLs. Entry editing remains Day 13 scope.
 - Branch: fix/selected-work-preview. Implementation and verification pending.
+
+## Day 05 — preview synchronization and completion guidance — 2026-11-02
+
+- Review: fetched `origin/main` at `aef7e68` after the selected-work preview fix merged. Reviewed the existing validator, all four editors, preview sections, responsive CSS and previous Day 04 receipt. The profile summary previously exposed only a generic “Add details” state and the empty selected-work section disappeared from the preview.
+- Implementation: section guidance now derives from the first validator issue and includes the remaining item count; complete sections explicitly report that the preview is in sync. Section rows are keyboard-activatable and move focus to the corresponding editor heading or selected-work preview target. The preview toolbar reports live `ready/total` section status, and empty selected work stays visible with a truthful placeholder. Editor headings are focusable targets without changing the session-only data boundary.
+- Tests/checks: `npm test -- --reporter=dot --maxWorkers=1` passed (6 files, 16 tests); `npm run typecheck` passed; `npm run build` passed including Vite/PWA generation; `git diff --check` passed. The new App tests cover guidance, live sync text and section-target focus. No standalone lint script is configured.
+- Contribution evidence: the section guidance and preview state use synthetic sample content only; no personal career data or external posting was used.
+- Git: branch `day-05/preview-sync-guidance`; implementation and docs are ready to commit and push. PR and GitHub panel review remain pending; no CI or independent approval is claimed.
+- Next: complete exact-head PR review/merge/synchronization, then Day 06 section reorder and hide/show controls. Do not advance without a new user day trigger.

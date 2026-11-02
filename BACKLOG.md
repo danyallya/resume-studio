@@ -14,8 +14,8 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | 01 | **Done** — define typed profile/section schemas and validation rules; derive completion status from validated sample content. |
 | 02 | **Done** — profile/contact editor with examples, preview and field errors merged in PR #4 (`9febe00`). |
 | 03 | **Done** — experience editor with achievement prompts, date validation and live preview; merged through GitHub PR #5 (`5bea87c`). |
-| 04 | **In progress** — add education, optional certification and skills editors with validation and live-preview synchronization. |
-| 05 | Add preview synchronization and completion guidance per section. |
+| 04 | **Done** — add education, optional certification and skills editors with validation and live-preview synchronization (PR #6 merged; receipt reconciled). |
+| 05 | **Done** — add live preview synchronization status, section-specific completion guidance and keyboard-friendly section navigation (PR #8 pending panel delivery). |
 | 06 | Add section reorder and hide/show controls with keyboard support. |
 | 07 | Review first-week form/preview behavior, test it and fix data loss risks. |
 | 08 | Add draft autosave with explicit local data retention controls. |
@@ -59,6 +59,8 @@ Effective Day 02: apply [CONTRIBUTING.md](CONTRIBUTING.md) inside existing ticke
 - Day 03: Added session-only experience editing for role, organization, years/current status and achievements. Changes update the preview and completion validator; errors link to fields and review focuses the first issue. Achievement prompts emphasize supportable outcomes and avoid invented metrics. Issue #3 about selected-work preview/completeness remains a separate open follow-up.
 - Day 03 delivery receipt reconciled 2026-10-31: the workspace receipt confirms PR #5 targeted `main`, reviewed all 8 changed files at head `f5aae88a7ac4806eb238b968ac492da5fa3de33c`, and merged via GitHub with merge commit `5bea87cbe1325f9a78cce0f599e669e82cc39696`. Checks showed 0 configured runs; no CI pass or independent approval is claimed. This supersedes the earlier pending-panel note in DAILY-LOG.md.
 
-Next scope: Day 05 — preview synchronization and completion guidance per section, after Day 04 delivery gates are completed.
+Next scope: Day 06 — section reorder and hide/show controls with keyboard support, after Day 05 delivery gates are completed.
 
 - Review follow-up for Issue #3: validated selected-work entries now appear in the live/print preview, aligning the preview with the existing completion validator. The project editor remains scheduled for Day 13.
+
+- Day 05: Done. The section summary now derives actionable guidance from the same validator that drives completeness, focuses the relevant editor/preview target on activation, and exposes a live-sync status in the preview. Empty selected work remains visible as an honest preview placeholder instead of disappearing. Next: Day 06 section reorder and hide/show controls.
